@@ -34,7 +34,7 @@ def extract_data(trips):
             "Capacidade": trip["availableSeats"],
             "Ocupacao": trip["availableSeats"],
             "Data_Hora_Captacao": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            "Arquivo": "desafio_3/clickbus_preparado.xlsx"
+            "Arquivo": "desafio_3_1/clickbus_preparado.xlsx"
         })
     return data_list
 
@@ -56,7 +56,7 @@ def generate_excel(data_list):
             trip["Data_Hora_Captacao"], trip["Arquivo"]
         ])
 
-    filename = "desafio_3/clickbus_preparado.xlsx"
+    filename = "desafio_3_1/clickbus_preparado.xlsx"
     wb.save(filename)
     print(f"Relatório gerado: {filename}")
 
